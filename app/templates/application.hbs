@@ -1,59 +1,66 @@
-<div class="bg-black" style="height: 0.3rem; opacity: 0.9"> &nbsp; </div>
-<header>
-  <div class="p-3 clearfix">
-    <div class="float-left">
-      <img src="logo.png" alt="Fishboard" style="width: 200px; opacity: 0.9;">
-    </div>
-    <div class="float-right">
-      <button class="bg-transparent hover:bg-red text-red-dark uppercase hover:text-white py-2 px-4 border border-red hover:border-transparent rounded" type="button">
-        login
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mt-4 mb-4 lg:mt-10 lg:mb-10 p-2 flex flex-row items-center justify-center" >
-  <img src="mark.png" style="max-width: 90px; opacity: 0.8">
-</div>
-
-<div class="p-2 flex flex-row items-center justify-center" >
-  <div class="self-center max-w-full lg:max-w-md">
-    <h2 class="mb-2 text-xl lg:text-4xl leading-normal tracking-wide" style="opacity: 0.8;">
-      Tournament fishing community
-    </h2>
-    <div class="text-grey-lightest bg-grey-darkest lg:p-12 p-8 max-w-full lg:max-w-md rounded pb-12">
-      <p class="leading-normal  text-sm lg:text-xl" style="opacity: 0.9">There are fishing tournement happening every weekend! Get involved. Get win some money. And catch some fish! Sign up to learn more.</p>
-      <form class="mt-4 flex flex-wrap" style="opacity: .95">
-        {{#if media.isMobile}}
-          <input
-            class="md:rounded-l-sm py-4 px-4 mt-1 w-full"
-            placeholder="Email"
-          >
-          <button
-            class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
-              w-full
-              w-full
-            "
-            type="button"
-          >
-            Let's fish ↝
+<div class="flex flex-col" style="min-height: 100vh">
+  <div class="flex-grow">
+    <div class="bg-black" style="height: 0.3rem; opacity: 0.8" > &nbsp; </div>
+    <header>
+      <div class="p-3 clearfix">
+        <div class="float-left">
+          <img src="logo.png" alt="Fishboard" style="width: 200px; opacity: 0.9;">
+        </div>
+        <div class="float-right">
+          <button class="bg-transparent hover:bg-red text-red-dark uppercase hover:text-white py-2 px-4 border border-red hover:border-transparent rounded" type="button">
+            login
           </button>
-        {{else}}
-          <input
-            class="md:rounded-l-sm py-4 px-4 mt-1 flex-grow"
-            type="email"
-            placeholder="Email"
-          >
-          <button
-            class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
-            "
-            type="button"
-          >
-            Let's fish ↝
-          </button>
-        {{/if}}
-      </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="mt-4 mb-4 lg:mt-10 lg:mb-10 p-2 flex flex-row items-center justify-center" >
+      <img src="mark.png" style="max-width: 90px; opacity: 0.8">
     </div>
+
+    <div class="p-2 flex flex-row items-center justify-center" >
+      <div class="self-center max-w-full lg:max-w-md">
+        <h2 class="mb-2 text-xl lg:text-4xl leading-normal tracking-wide" style="opacity: 0.8;">
+          Tournament Fishing Community
+        </h2>
+        <div class="text-grey-lightest bg-grey-darkest lg:p-12 p-8 max-w-full lg:max-w-md rounded pb-12">
+          <p class="leading-normal  text-sm lg:text-xl" style="opacity: 0.9">There are fishing tournaments happening every weekend! Get involved, catch some fish, and maybe even some money.  Sign up to learn more.</p>
+          <form class="mt-4 flex flex-wrap" style="opacity: .95">
+            {{#if media.isMobile}}
+              <input
+                class="md:rounded-l-sm py-4 px-4 mt-1 w-full"
+                placeholder="Email"
+              >
+              <button
+                class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
+                  w-full
+                  w-full
+                "
+                type="button"
+              >
+                Let's fish ↝
+              </button>
+            {{else}}
+              <input
+                class="md:rounded-l-sm py-4 px-4 mt-1 flex-grow"
+                type="email"
+                placeholder="Email"
+              >
+              <button
+                class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
+                "
+                type="button"
+              >
+                Let's fish ↝
+              </button>
+            {{/if}}
+          </form>
+        </div>
+      </div>
+    </div>
+  {{outlet}}
+  </div>
+  <div class="py-4 text-sm font-bold text-center bg-white uppercase">
+    Brought to you by <a href="https://lonestarguide.com/"><img style="height: 40px; margin-bottom: -15px;" src="lsg-small.png"></a> Copyright 2019.
   </div>
 </div>
-{{outlet}}
