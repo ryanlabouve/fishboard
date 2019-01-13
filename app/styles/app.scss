@@ -1,0 +1,26 @@
+$bg-grey-light: #dae1e7;
+
+@import 'tailwind';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: $bg-grey-light;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(/topography.svg);
+  min-height: 100%;
+}
