@@ -20,17 +20,37 @@
     <h2 class="mb-2 text-xl lg:text-4xl leading-normal tracking-wide" style="opacity: 0.8;">
       Tournament fishing community
     </h2>
-    <div class="text-grey-lightest bg-grey-darkest p-8 max-w-full lg:max-w-md rounded pb-12">
+    <div class="text-grey-lightest bg-grey-darkest lg:p-12 p-8 max-w-full lg:max-w-md rounded pb-12">
       <p class="leading-normal  text-sm lg:text-xl" style="opacity: 0.9">There are fishing tournement happening every weekend! Get involved. Get win some money. And catch some fish! Sign up to learn more.</p>
-      <form class="mt-4 flex" style="opacity: .95">
-        <input style="min-width: 140px;" class="rounded-l-sm flex-grow px-4 text-xl" placeholder="Email">
-        <button
-          style="min-width: 130px;"
-          class="bg-blue text-xl hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline rounded-r-sm"
-          type="button"
-        >
-          Let's fish ↝
-        </button>
+      <form class="mt-4 flex flex-wrap" style="opacity: .95">
+        {{#if media.isMobile}}
+          <input
+            class="md:rounded-l-sm py-4 px-4 mt-1 w-full"
+            placeholder="Email"
+          >
+          <button
+            class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
+              w-full
+              w-full
+            "
+            type="button"
+          >
+            Let's fish ↝
+          </button>
+        {{else}}
+          <input
+            class="md:rounded-l-sm py-4 px-4 mt-1 flex-grow"
+            type="email"
+            placeholder="Email"
+          >
+          <button
+            class="mt-1  bg-blue hover:bg-blue-dark text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline md:rounded-r-sm
+            "
+            type="button"
+          >
+            Let's fish ↝
+          </button>
+        {{/if}}
       </form>
     </div>
   </div>
