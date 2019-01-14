@@ -4,7 +4,9 @@
     <header>
       <div class="p-3 clearfix">
         <div class="float-left">
-          <img src="logo.png" alt="Fishboard" style="width: 200px; opacity: 0.9;">
+          {{#link-to "index"}}
+            <img src="logo.png" alt="Fishboard" style="width: 200px; opacity: 0.9;">
+          {{/link-to}}
         </div>
         <div class="float-right pt-1">
           {{link-to "login" "tournement" class="bg-transparent no-underline hover:bg-red text-red-dark uppercase hover:text-white py-2 px-4 border border-red hover:border-transparent rounded" type="button"}}
